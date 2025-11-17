@@ -106,7 +106,7 @@ chrome.storage.local.get(CURRENT_WARNING_MESSAGE_KEY, (result) => {
     
     if (message) {
         // 2. Display the modal with the message
-        displayWarningModal(message);
+        setTimeout(() => { displayWarningModal(message); }, 500);
     }
 
     // 3. IMPORTANT: Delete the temporary message from storage
